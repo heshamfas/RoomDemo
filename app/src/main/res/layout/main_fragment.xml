@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.main.MainFragment" android:orientation="vertical">
+    <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:layout_margin="10dp">
+
+        <TableRow android:layout_width="match_parent" android:layout_height="match_parent" android:layout_margin="10dp">
+            <TextView
+                    android:text="product id"
+                    android:layout_width="76dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"/>
+            <TextView
+                    android:text="Not assigned"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/productId" android:layout_margin="10dp"/>
+        </TableRow>
+        <TableRow android:layout_width="match_parent" android:layout_height="match_parent" android:layout_margin="10dp">
+            <TextView
+                    android:text="Product Name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+                    android:text="Name"
+                    android:ems="10"
+                    android:id="@+id/productName"/>
+        </TableRow>
+        <TableRow android:layout_width="match_parent" android:layout_height="match_parent" android:layout_margin="10dp">
+            <TextView
+                    android:text="Quantity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+            />
+            <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="numberDecimal"
+                    android:ems="10"
+                    android:id="@+id/productQuantity"/>
+        </TableRow>
+    </TableLayout>
+    <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:gravity="center_horizontal" android:layout_margin="10dp">
+        <Button
+                android:text="Add"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:id="@+id/btnAdd" android:layout_weight="1"
+                style="@style/Widget.AppCompat.Button.Borderless"/>
+        <Button
+                android:text="Find"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:id="@+id/btn_find"
+                style="@style/Widget.AppCompat.Button.Borderless"/>
+        <Button
+                android:text="Delete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:id="@+id/btn_delete" android:layout_weight="1"
+                style="@style/Widget.AppCompat.Button.Borderless"/>
+    </LinearLayout>
+    <android.support.v7.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" android:id="@+id/product_recycler" android:layout_margin="10dp"/>
+</LinearLayout>
